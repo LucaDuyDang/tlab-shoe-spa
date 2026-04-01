@@ -1,7 +1,6 @@
 /*
-Theme Name: Tslab Shoe Spa Theme
+Theme Name: TLAB Theme
 Author: Luca
-Description: Minimalist theme for shoe services.
 Version: 1.0
 */
 
@@ -20,7 +19,7 @@ body {
     color: white;
     padding: 20px 0;
 }
-
+  
 .hero {
     background: url('https://via.placeholder.com/1920x600');
     background-size: cover;
