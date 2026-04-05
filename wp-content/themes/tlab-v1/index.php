@@ -127,16 +127,16 @@
             </ul>
         </form>
         <ul class="contact">
-            <li class="icon solid fa-home">
+            <li class="icon regular fa-map">
                 T'sLab<br />
                 93 Bùi Đình Tuý, Phường 14, Quận Bình Thạnh<br />
                 Việt Nam, 07000
             </li>
-            <li class="icon solid fa-phone">(000) 000-0000</li>
-            <li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-            <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-            <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-            <li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+            <li class="icon solid fa-phone-volume">(+84) 767-010792</li>
+            <li class="icon solid fa-envelope"><a href="#">info@tslabshoespa.com</a></li>
+            <li class="icon brands fa-tiktok"><a href="#">tiktok.com/tslabshoespa</a></li>
+            <li class="icon brands fa-facebook-f"><a href="#">facebook.com/tslabshoespa</a></li>
+            <li class="icon brands fa-instagram"><a href="#">instagram.com/tslabshoespa</a></li>
         </ul>
         <ul class="copyright">
             <li>&copy; T'sLab. All rights reserved.</li>
