@@ -20,7 +20,7 @@
                 small:   '(max-width: 736px)',
                 xsmall:  '(max-width: 480px)'
             });
-            console.log("Miuw: Breakpoints đã chạy.");
+            console.log("Breakpoints đã chạy.");
         }
 
         // 2. HIỆN BANNER NGAY LẬP TỨC (Xử lý is-preload)
@@ -28,7 +28,7 @@
         $window.on('load', function() {
             window.setTimeout(function() {
                 $body.removeClass('is-preload');
-                console.log("Miuw: Đã xóa is-preload.");
+                console.log("Breakpoints đã chạy.");
             }, 100);
         });
 
@@ -36,7 +36,7 @@
         window.setTimeout(function() {
             if ($body.hasClass('is-preload')) {
                 $body.removeClass('is-preload');
-                console.log("Miuw: Xóa is-preload bằng dự phòng.");
+                console.log("Xóa is-preload bằng dự phòng.");
             }
         }, 2000);
 
@@ -111,7 +111,7 @@
                     if (event.keyCode == 27) $menu._hide();
                 });
             
-            console.log("Miuw: Menu đã được thiết lập.");
+            console.log("Menu đã được thiết lập.");
         }
 
     });

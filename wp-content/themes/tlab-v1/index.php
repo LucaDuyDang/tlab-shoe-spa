@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 
-<!-- Menu -->
 <nav id="menu">
     <div class="inner">
         <h2>Menu</h2>
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="generic.html">Generic</a></li>
-            <li><a href="elements.html">Elements</a></li>
+            <li><a href="<?php echo home_url(); ?>">Home</a></li>
+            <li><a href="<?php echo home_url('/page_generic'); ?>">Generic</a></li>
+            <li><a href="<?php echo home_url('/page_elements'); ?>">Elements</a></li>
             <li><a href="#">Log In</a></li>
             <li><a href="#">Sign Up</a></li>
         </ul>
@@ -15,80 +14,76 @@
     </div>
 </nav>
 
-<!-- Banner -->
 <section id="banner">
     <div class="inner">
         <div class="logo"><span class="icon fa-gem"></span></div>
         <h2>Tlab Shoes Spa</h2>
-        <p>Another fine shoes spa you can find <a href="http://github.com/luca">Luca</a></p>
+        <p>T’s Lab cung cấp dịch vụ chăm sóc giày chuyên nghiệp, kết hợp kỹ thuật cao và đội ngũ tận tâm. Chúng tôi mang đến trải nghiệm toàn diện từ làm sạch, sửa chữa đến bảo dưỡng chi tiết, giúp đôi giày của bạn luôn như mới, bền đẹp và thoải mái. Hãy đến T’s Lab để giữ gìn phong cách và giá trị cho đôi giày yêu thích của bạn.
+            <a href="https://github.com/LucaDuyDang" target="_blank">Luca</a>
+        </p>
     </div>
 </section>
 
-<!-- Wrapper -->
 <section id="wrapper">
 
-    <!-- One -->
     <section id="one" class="wrapper spotlight style1">
         <div class="inner">
-            <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+            <a href="#" class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pic-round.jpg" alt="TsLab Service 1" /></a>
             <div class="content">
-                <h2 class="major">Magna arcu feugiat</h2>
-                <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                <a href="#" class="special">Learn more</a>
+                <h2 class="major">DỊCH VỤ GIÀY</h2>
+                <p>Chúng tôi cung cấp dịch vụ chăm sóc giày toàn diện, từ làm sạch, sửa chữa đến bảo dưỡng chi tiết.</p>
+                <a href="#" class="special">Chi tiết</a>
             </div>
         </div>
     </section>
 
-    <!-- Two -->
     <section id="two" class="wrapper alt spotlight style2">
         <div class="inner">
-            <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+            <a href="#" class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pic-round.jpg" alt="TsLab Service 2" /></a>
             <div class="content">
-                <h2 class="major">Tempus adipiscing</h2>
-                <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                <a href="#" class="special">Learn more</a>
+                <h2 class="major">DỊCH VỤ TÚI</h2>
+                <p>Chúng tôi cung cấp dịch vụ chăm sóc túi toàn diện, từ làm sạch, sửa chữa đến bảo dưỡng chi tiết.</p>
+                <a href="#" class="special">Chi tiết</a>
             </div>
         </div>
     </section>
 
-    <!-- Three -->
     <section id="three" class="wrapper spotlight style3">
         <div class="inner">
-            <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+            <a href="#" class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pic-round.jpg" alt="TsLab Service 3" /></a>
             <div class="content">
-                <h2 class="major">Nullam dignissim</h2>
-                <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                <a href="#" class="special">Learn more</a>
+                <h2 class="major">DỊCH VỤ NÓN</h2>
+                <p>Chúng tôi cung cấp dịch vụ chăm sóc nón toàn diện, từ làm sạch, sửa chữa đến bảo dưỡng chi tiết.</p>
+                <a href="#" class="special">Chi tiết</a>
             </div>
         </div>
     </section>
 
-    <!-- Four -->
     <section id="four" class="wrapper alt style1">
         <div class="inner">
             <h2 class="major">Vitae phasellus</h2>
-            <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+            <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci.</p>
             <section class="features">
                 <article>
-                    <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+                    <a href="#" class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pic-round.jpg" alt="" /></a>
                     <h3 class="major">Sed feugiat lorem</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
                     <a href="#" class="special">Learn more</a>
                 </article>
                 <article>
-                    <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+                    <a href="#" class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pic-round.jpg" alt="" /></a>
                     <h3 class="major">Nisl placerat</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
                     <a href="#" class="special">Learn more</a>
                 </article>
                 <article>
-                    <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+                    <a href="#" class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pic-round.jpg" alt="" /></a>
                     <h3 class="major">Ante fermentum</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
                     <a href="#" class="special">Learn more</a>
                 </article>
                 <article>
-                    <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                    <a href="#" class="image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pic-round.jpg" alt="" /></a>
                     <h3 class="major">Fusce consequat</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
                     <a href="#" class="special">Learn more</a>
@@ -102,11 +97,10 @@
 
 </section>
 
-<!-- Footer -->
 <section id="footer">
     <div class="inner">
         <h2 class="major">Get in touch</h2>
-        <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+        <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas.</p>
         <form method="post" action="#">
             <div class="fields">
                 <div class="field">
@@ -127,23 +121,22 @@
             </ul>
         </form>
         <ul class="contact">
-            <li class="icon regular fa-map">
+            <li class="icon solid fa-home">
                 T'sLab<br />
                 93 Bùi Đình Tuý, Phường 14, Quận Bình Thạnh<br />
                 Việt Nam, 07000
             </li>
-            <li class="icon solid fa-phone-volume">(+84) 767-010792</li>
-            <li class="icon solid fa-envelope"><a href="#">info@tslabshoespa.com</a></li>
-            <li class="icon brands fa-tiktok"><a href="#">tiktok.com/tslabshoespa</a></li>
-            <li class="icon brands fa-facebook-f"><a href="#">facebook.com/tslabshoespa</a></li>
-            <li class="icon brands fa-instagram"><a href="#">instagram.com/tslabshoespa</a></li>
+            <li class="icon solid fa-phone">(+84) 767-010792</li>
+            <li class="icon solid fa-envelope"><a href="mailto:info@tslabshoespa.com">info@tslabshoespa.com</a></li>
+            <li class="icon brands fa-tiktok"><a href="#" target="_blank">tiktok.com/tslabshoespa</a></li>
+            <li class="icon brands fa-facebook-f"><a href="#" target="_blank">facebook.com/tslabshoespa</a></li>
+            <li class="icon brands fa-instagram"><a href="#" target="_blank">instagram.com/tslabshoespa</a></li>
         </ul>
         <ul class="copyright">
             <li>&copy; T'sLab. All rights reserved.</li>
-            <li>Design: <a href="#">Luca</a></li>
+            <li>Design: <a href="https://github.com/LucaDuyDang" target="_blank">Luca</a></li>
         </ul>
     </div>
 </section>
-
 
 <?php get_footer(); ?>
