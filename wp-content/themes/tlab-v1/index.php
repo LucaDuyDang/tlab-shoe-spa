@@ -4,11 +4,11 @@
     <div class="inner">
         <h2>Menu</h2>
         <ul class="links">
-            <li><a href="<?php echo home_url(); ?>">Home</a></li>
-            <li><a href="<?php echo home_url('/page_generic'); ?>">Generic</a></li>
-            <li><a href="<?php echo home_url('/page_elements'); ?>">Elements</a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li><a href="<?php echo home_url('#'); ?>">HomePage</a></li>
+            <li><a href="<?php echo home_url('/page_generic'); ?>">About Us</a></li>
+            <li><a href="<?php echo home_url('/page_elements'); ?>">Services</a></li>
+            <li><a href="<?php echo home_url('/page_contact'); ?>">Contact</a></li>
+            <li><a href="<?php echo home_url('/page_for_business'); ?>">For Business</a></li>
         </ul>
         <a href="#" class="close">Close</a>
     </div>
@@ -17,7 +17,7 @@
 <section id="banner">
     <div class="inner">
         <div class="logo"><span class="icon fa-gem"></span></div>
-        <h2>Tlab Shoes Spa</h2>
+        <h2>T's lab Shoes Spa</h2>
         <p>T’s Lab cung cấp dịch vụ chăm sóc giày chuyên nghiệp, kết hợp kỹ thuật cao và đội ngũ tận tâm. Chúng tôi mang đến trải nghiệm toàn diện từ làm sạch, sửa chữa đến bảo dưỡng chi tiết, giúp đôi giày của bạn luôn như mới, bền đẹp và thoải mái. Hãy đến T’s Lab để giữ gìn phong cách và giá trị cho đôi giày yêu thích của bạn.
             <a href="https://github.com/LucaDuyDang" target="_blank">Luca</a>
         </p>

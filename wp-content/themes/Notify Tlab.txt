@@ -1,0 +1,160 @@
+Tiêu Đề : Tlab Shoe Spa
+Tên  người dùng : admin
+Pass : izsW9G*k*nvXyatOJE
+
+Domain Host Owner Info :
+name: Bùi Hoàng Kim Thanh 
+ccdc:079092023303 
+phone:0767010792
+birthday:01/07/1992
+address:384/30/2 Lý Thái Tổ, phường Vườn Lài, quận 10
+email:buihoangkimthanh01071992@gmail.com
+Domain user : 
+Domain password : 
+
+
+--------------------------------------------------------------------------------
+Sơ đồ source
+wp-content/themes/shoes-spa-custom/
+├── assets/             (Thư mục chứa ảnh, css, js)
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── parts/              (Chứa các mẩu code nhỏ để tái sử dụng)
+│   └── content-service.php
+├── 404.php             (Trang lỗi)
+├── archive.php         (Trang danh sách dịch vụ)
+├── footer.php          (Phần chân trang)
+├── front-page.php      (Trang chủ đặc biệt)
+├── functions.php       (Bộ não của theme)
+├── header.php          (Phần đầu trang)
+├── index.php           (File dự phòng)
+├── page.php            (Trang tĩnh: Liên hệ, Giới thiệu)
+├── screenshot.png      (Ảnh đại diện theme)
+├── single.php          (Trang chi tiết dịch vụ)
+└── style.css           (Khai báo theme & CSS chính)
+
+
+--------------------------------------------------------------------------------
+SEO Keyword:
+shoe care / chăm sóc giày
+shoe cleaning / vệ sinh giày
+shoe restoration / phục hồi giày
+sneaker care / chăm sóc sneaker
+shoe 
+
+--------------------------------------------------------------------------------
+Sample about us full : 
+T’s Lab được xây dựng từ một niềm tin rất đơn giản –
+mỗi đôi giày đều xứng đáng được chăm sóc đúng cách.
+
+Trong nhịp sống nhanh, giày thường bị xem như một vật dụng có thể thay thế.
+Nhưng với chúng tôi, mỗi đôi giày đều mang theo dấu vết của thời gian,
+những hành trình, và những bước chân đã từng đi qua.
+
+Vì vậy, T’s Lab không chỉ là nơi cung cấp dịch vụ chăm sóc giày.
+Đó là nơi chúng tôi lựa chọn làm chậm lại,
+để lắng nghe, quan sát và xử lý từng chi tiết nhỏ nhất.
+
+Chúng tôi tiếp cận việc chăm sóc giày (shoe care)
+không chỉ bằng kỹ thuật, mà bằng sự tôn trọng.
+
+Từ làm sạch (cleaning), phục hồi (restoration)
+đến bảo dưỡng (maintenance),
+mỗi quy trình đều được thực hiện một cách chính xác và có chủ đích.
+
+Không làm quá.
+Không thay đổi bản chất.
+Chỉ giữ lại những gì thực sự cần thiết.
+
+Tại T’s Lab, chúng tôi theo đuổi sự tối giản.
+
+Tối giản trong cách làm việc,
+tối giản trong quy trình,
+và tối giản trong cả kết quả.
+
+Chúng tôi tin rằng một đôi giày tốt
+không cần phải trông “mới hoàn toàn”,
+mà cần giữ được cảm giác thoải mái, độ bền
+và vẻ đẹp nguyên bản theo thời gian.
+
+Điều chúng tôi hướng đến không phải là sự thay đổi tức thời,
+mà là giá trị lâu dài.
+
+Một đôi giày sau khi được chăm sóc tại T’s Lab
+có thể không khác biệt quá rõ ràng ngay lập tức,
+nhưng sẽ bền hơn, ổn định hơn
+và tốt hơn trong từng bước chân bạn đi.
+
+T’s Lab không cố gắng làm mọi thứ trở nên phức tạp.
+Chúng tôi chỉ tập trung vào việc làm đúng –
+đủ, chính xác, và bền vững.
+
+Đó là cách chúng tôi chăm sóc giày.
+Và cũng là cách chúng tôi xây dựng giá trị của mình.
+
+--------------------------------------------------------------------------------
+Short Vers :
+T’s Lab không chỉ cung cấp dịch vụ chăm sóc giày,
+mà là nơi gìn giữ giá trị của từng đôi giày theo thời gian.
+
+Chúng tôi tiếp cận mỗi quy trình bằng sự tỉ mỉ và tinh giản,
+từ làm sạch đến phục hồi, luôn giữ lại vẻ đẹp nguyên bản
+và cảm giác thoải mái khi sử dụng.
+
+Không thay đổi, chỉ hoàn thiện –
+một cách nhẹ nhàng nhưng bền vững.
+
+--------------------------------------------------------------------------------
+H2: Our Philosophy
+
+T’s Lab được xây dựng dựa trên một triết lý đơn giản –
+mọi thứ đều nên được chăm sóc đúng cách, với sự tôn trọng và tinh tế.
+
+Chúng tôi tin rằng một đôi giày không chỉ là vật dụng,
+mà là một phần của hành trình và thói quen hàng ngày.
+Vì vậy, việc chăm sóc không chỉ dừng lại ở làm sạch,
+mà là giữ lại giá trị vốn có theo thời gian.
+
+H2: Our Approach
+
+Chúng tôi tiếp cận việc chăm sóc giày theo hướng tối giản và chính xác.
+
+Mỗi quy trình, từ làm sạch đến phục hồi,
+đều được thực hiện với sự tập trung vào chi tiết và hiệu quả thực tế.
+
+Không làm quá mức.
+Không thay đổi bản chất ban đầu.
+Chỉ giữ lại những gì thực sự cần thiết để đôi giày hoạt động tốt nhất.
+
+H2: What We Do
+
+T’s Lab cung cấp các dịch vụ chăm sóc giày toàn diện,
+bao gồm làm sạch, phục hồi và bảo dưỡng.
+
+Mỗi dịch vụ đều được thiết kế để cải thiện độ bền,
+giữ lại cảm giác thoải mái và duy trì vẻ ngoài nguyên bản.
+
+Chúng tôi không chỉ cải thiện hình thức,
+mà còn đảm bảo đôi giày của bạn tiếp tục đồng hành lâu dài.
+
+H2: Our Values
+
+Chúng tôi tin vào sự bền vững đến từ những điều nhỏ nhất.
+
+Sự tỉ mỉ trong từng chi tiết.
+Sự chính xác trong từng quy trình.
+Và sự nhất quán trong cách chúng tôi làm việc mỗi ngày.
+
+Đó là những yếu tố tạo nên chất lượng mà T’s Lab theo đuổi.
+
+H2: Our Commitment
+
+Chúng tôi không hướng đến sự thay đổi nhanh chóng,
+mà hướng đến giá trị lâu dài.
+
+Mỗi đôi giày sau khi được chăm sóc tại T’s Lab
+đều được cải thiện theo cách tự nhiên và bền vững.
+
+Để bạn không chỉ nhìn thấy sự khác biệt,
+mà còn cảm nhận được nó trong từng bước chân.
