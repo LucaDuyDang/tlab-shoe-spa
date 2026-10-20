@@ -1,0 +1,987 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   HERO SECTION (BACKGROUND & LAYOUT)
+   ========================================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 60px 40px 60px;
+    
+    /* Ảnh nền thợ đóng giày - Thay đường dẫn ảnh của Luca vào đây */
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.4) 0%, rgba(13, 13, 13, 0.85) 100%),
+                url('../images/hero-bg.jpg') center/cover no-repeat;
+}
+
+/* ==========================================
+   HEADER / NAVBAR
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+.logo a {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.lang-switch {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 10px;
+}
+
+.lang-switch .active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ==========================================
+   HERO MAIN CONTENT
+   ========================================== */
+.hero-content {
+    max-width: 650px;
+    margin-top: 60px;
+    z-index: 10;
+}
+
+.sub-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.sub-title .dash {
+    width: 24px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.main-title {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 28px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #0d0d0d;
+    border: 1px solid #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================
+   HERO FOOTER FEATURES
+   ========================================== */
+.hero-features {
+    display: flex;
+    gap: 60px;
+    z-index: 10;
+    margin-top: 60px;
+}
+
+.feature-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 16px;
+    min-width: 180px;
+}
+
+.feature-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 6px;
+}
+
+.feature-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================
+   RESPONSIVE (MOBILE & TABLET)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 20px 24px 30px 24px;
+    }
+
+    .nav-left, .nav-right {
+        display: none; /* Sau này sẽ làm Menu Mobile hamburger */
+    }
+
+    .main-title {
+        font-size: 40px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* ==========================================
+   SERVICES SECTION
+   ========================================== */
+.services-section {
+    background-color: #f4f4f0; /* Tông màu sáng hơi kem sang trọng */
+    color: #1a1a1a;
+    padding: 100px 60px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header của Section */
+.section-header {
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+
+.sub-title.dark {
+    color: #666666;
+}
+
+.sub-title .dash.dark {
+    background-color: #666666;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.section-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* Grid chứa 3 cột */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Card item */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Cố định ảnh luôn là hình vuông chuẩn tỉ lệ 1:1 */
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng phóng nhẹ ảnh khi hover */
+.service-card:hover .card-image img {
+    transform: scale(1.04);
+}
+
+.card-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #111111;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.card-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555555;
+    margin-bottom: 24px;
+    min-height: 42px; /* Đảm bảo 3 card luôn thẳng hàng nút bấm */
+}
+
+/* Nút bấm viền mỏng dạng outline tối */
+.btn-card {
+    background-color: transparent;
+    color: #111111;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 12px 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+/* ==========================================
+   RESPONSIVE CHO SECTION SERVICES
+   ========================================== */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 60px 24px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* ==========================================
+   PROCESS SECTION (NỀN XANH ĐEN ĐẬM)
+   ========================================== */
+.process-section {
+    background-color: #060e1a; /* Tông màu xanh đen Midnight Navy sang trọng */
+    color: #ffffff;
+    padding: 100px 60px;
+}
+
+/* Biến thể màu chữ sáng cho Header */
+.sub-title.light,
+.sub-title .dash.light {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.section-title.light {
+    color: #ffffff;
+}
+
+.section-desc.light {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Grid cấu trúc 3 cột chính */
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.process-col {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Khoảng cách giữa bước trên và bước dưới */
+}
+
+/* Định vị chữ căn lề */
+.process-col.left {
+    text-align: left;
+}
+
+.process-col.right {
+    text-align: left;
+}
+
+.process-item {
+    max-width: 320px;
+}
+
+.process-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.process-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Ảnh dọc đặt ở chính giữa */
+.process-image {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Tỉ lệ khung hình dọc */
+    overflow: hidden;
+}
+
+.process-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   RESPONSIVE CHO PROCESS SECTION
+   ========================================== */
+@media (max-width: 992px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .process-col {
+        gap: 40px;
+    }
+
+    .process-col.center {
+        order: -1; /* Đưa ảnh lên trước trên thiết bị di động/màn hình nhỏ */
+    }
+
+    .process-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-section {
+        padding: 60px 24px;
+    }
+}
+
+/* ==========================================
+   RESULTS & TRANSFORMATIONS SECTION
+   ========================================== */
+.results-section {
+    background-color: #f4f4f0; /* Nền sáng kem đồng bộ với Services */
+    color: #111111;
+    padding: 100px 60px;
+}
+
+/* Header căn giữa */
+.section-header.center {
+    text-align: center;
+    margin: 0 auto 60px auto;
+}
+
+.sub-title.center {
+    justify-content: center;
+}
+
+.section-desc.center {
+    margin: 0 auto;
+}
+
+/* Wrapper bố cục Before / After */
+.transformations-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Case đơn ở top và bottom căn giữa */
+.case-item.case-top,
+.case-item.case-bottom {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Hàng giữa 2 cột */
+.cases-row-middle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Cặp ảnh Before / After */
+.before-after-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ nguyên phom dáng giày/túi trên nền trắng */
+    padding: 15px;
+    transition: transform 0.4s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.05);
+}
+
+/* Tag BEFORE / AFTER nhỏ đặt bên dưới mỗi hình */
+.badge {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #777777;
+    text-transform: uppercase;
+}
+
+/* Thông tin tên Case Study */
+.case-info {
+    text-align: center;
+}
+
+.case-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #111111;
+    margin-bottom: 6px;
+}
+
+.case-desc {
+    font-size: 13px;
+    color: #666666;
+}
+
+/* Nút bấm ở dưới cùng */
+.results-action {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* ==========================================
+   RESPONSIVE CHO RESULTS SECTION
+   ========================================== */
+@media (max-width: 992px) {
+    .cases-row-middle {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .results-section {
+        padding: 60px 24px;
+    }
+
+    .before-after-pair {
+        gap: 10px;
+    }
+}
+
+/* ==========================================
+   SECTION 1: ABOUT T'S LAB (GIAO DIỆN SÁNG)
+   ========================================== */
+.about-section {
+    background-color: #ffffff; /* Nền trắng tinh khiết/sạch sẽ */
+    color: #111111;
+    padding: 100px 60px;
+}
+
+/* Cấu trúc Grid chia 2 cột bằng nhau cho phần About */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% Ảnh - 50% Nội dung */
+    gap: 80px;                       /* Khoảng cách giữa ảnh và chữ */
+    align-items: center;             /* Căn chỉnh dọc thẳng hàng tâm giữa */
+}
+
+/* Khung ảnh vuông/hình chữ nhật chuẩn */
+.about-image-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;             /* Ép khung ảnh thành hình vuông chuẩn */
+    overflow: hidden;
+}
+
+.about-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;               /* Ảnh phủ kín khung mà không bị móp méo */
+    transition: transform 0.6s ease;
+}
+
+/* Hiệu ứng phóng nhẹ ảnh khi di chuột vào */
+.about-image-box:hover img {
+    transform: scale(1.03);
+}
+
+/* Khoảng cách các thành phần trong cột chữ */
+.about-content .section-title {
+    margin-bottom: 24px;
+}
+
+.about-content .section-desc {
+    margin-bottom: 36px;
+    line-height: 1.7;               /* Tăng khoảng cách dòng giúp đọc thoáng mắt hơn */
+}
+
+
+/* ==========================================
+   SECTION 2: LET'S CONNECT / CTA (NỀN TỐI)
+   ========================================== */
+.connect-cta-section {
+    background-color: #060e1a;       /* Tông màu xanh đen Midnight Navy (Đồng bộ với Process Section) */
+    color: #ffffff;
+    padding: 100px 60px;
+}
+
+/* Giới hạn chiều rộng nội dung căn giữa */
+.connect-content {
+    max-width: 800px;
+}
+
+.cta-title {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.cta-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);  /* Màu chữ trắng mờ nhẹ tạo chiều sâu */
+    margin-bottom: 40px;
+}
+
+
+/* ==========================================
+   RESPONSIVE (TỐI ƯU TRÊN DI ĐỘNG & TABLET)
+   ========================================== */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;   /* Trên máy tính bảng/điện thoại: Chuyển về 1 cột */
+        gap: 40px;
+    }
+
+    .cta-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section,
+    .connect-cta-section {
+        padding: 60px 24px;           /* Thu gọn padding trên màn hình di động nhỏ */
+    }
+
+    .cta-buttons {
+        flex-direction: column;      /* Nút bấm xếp chồng lên nhau trên màn hình nhỏ */
+        align-items: stretch;
+    }
+}
+
+/* ==========================================
+   JOURNAL SECTION (BACKGROUND SÁNG/KEM)
+   ========================================== */
+.journal-section {
+    background-color: #f4f4f0;
+    color: #111111;
+    padding: 100px 60px 80px 60px;
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.journal-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.journal-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.journal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.journal-card:hover .journal-image img {
+    transform: scale(1.04);
+}
+
+.journal-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.category-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #888888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.journal-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.journal-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.read-more-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: #111111;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+}
+
+.read-more-link:hover {
+    color: #555555;
+}
+
+.journal-action {
+    text-align: center;
+}
+
+
+/* ==========================================
+   MAIN FOOTER SECTION
+   ========================================== */
+.main-footer {
+    background-color: #f4f4f0;
+    color: #222222;
+    padding: 60px 60px 40px 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-heading {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    font-size: 13px;
+    color: #555555;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #111111;
+}
+
+.footer-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.footer-text strong {
+    color: #111111;
+}
+
+/* Newsletter Input */
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    outline: none;
+}
+
+.newsletter-form input:focus {
+    border-color: #111111;
+}
+
+.btn-submit {
+    padding: 10px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #111111;
+    color: #ffffff;
+    border: 1px solid #111111;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #333333;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #111111;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #777777;
+}
+
+
+/* ==========================================
+   RESPONSIVE (JOURNAL & FOOTER)
+   ========================================== */
+@media (max-width: 992px) {
+    .journal-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .journal-section,
+    .main-footer {
+        padding: 40px 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
+/* ==========================================
+   HEADER / NAVBAR (MẶC ĐỊNH: STATIC - KHÔNG TRÔI)
+   ========================================== */
+.navbar {
+    position: absolute; /* Giữ header nằm yên ở đỉnh trang */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 60px;
+    z-index: 100;
+    background: transparent;
+    transition: all 0.4s ease;
+}
+
+.hero-section {
+    padding-top: 30px; /* Bù khoảng trống vừa đủ cho Header tĩnh */
+}
+
+
+/* ==========================================
+   CHẾ ĐỘ BẬT HIỆU ỨNG: STICKY / FADE HEADER
+   /* (Xóa '' ở trên và '*/
+
+/* 
+.navbar {
+    position: fixed;
+}
+
+.navbar.scrolled {
+    background-color: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 16px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section {
+    padding-top: 120px;
+}
+*/

@@ -1,0 +1,22 @@
+TsLab bố cục sắp xếp hiển thị. 
+
+  Bố Cục Hiển Thị (Grid & Flexbox):
+•	display: grid;: Định dạng lưới đa cột. Dùng grid-template-columns: repeat(3, 1fr); để chia đều 3 cột tự động (dùng cho Services, Process, Journal). 
+•	display: flex;: Định dạng linh hoạt theo 1 trục (hàng ngang hoặc hàng dọc). Dùng justify-content: space-between; để đẩy Header Menu/Footer về 2 đầu. 
+  Khung Hình & Khống Chế Ảnh (Image Aspect Ratio):
+•	aspect-ratio: 1 / 1; (Hoặc 3 / 4, 16 / 10): Khóa tỉ lệ khung ảnh luôn cố định (vuông, đứng hoặc chữ nhật ngang). Dùng để giữ phom dáng ảnh đồng đều bất kể ảnh upload có kích thước nào. 
+•	object-fit: cover;: Ép ảnh phủ kín khung chứa mà không bị móp hay biến dạng phom chữ. 
+•	object-fit: contain;: Giữ nguyên toàn bộ chi tiết ảnh bên trong khung, không xén góc (dùng cho phần Before/After). 
+ Tương Tác & Chuyển Động (Transitions & Hover):
+•	transition: transform 0.5s ease;: Khai báo thời gian chuyển động mượt mà khi di chuột vào nút bấm hoặc hình ảnh.
+•	transform: scale(1.04);: Hiệu ứng phóng to nhẹ ảnh 4% khi di chuột vào (hover). 
+•	transform: translateY(-4px);: Hiệu ứng nâng nhẹ toàn bộ thẻ tin tức nổi lên trên 4px. 
+  Co Giãn Đa Màn Hình (Responsive Design):
+•	@media (max-width: 992px) và @media (max-width: 768px): Điểm ngắt (Breakpoints) giúp nhận diện thiết bị di động hay máy tính bảng để ép số cột về 1fr (1 cột xếp chồng) giúp giao diện luôn vừa vặn trên mọi thiết bị. 
+
+
+
+Bố cục hỗ trợ 
+
+1. Tổng quan & Thiết lập Môi trường:Workflow: Phát triển UI tĩnh trên folder test dùng VS Code Live Server trước khi đưa vào WordPress theme (tslab-theme).Cấu hình Localhost: XAMPP (Apache + MySQL) chạy mượt mà tại C:\xampp\htdocs\.Tông màu chủ đạo: Dark/Hero (#0d0d0d), Cream/Off-White (#f4f4f0), Midnight Navy (#060e1a).
+   2. Tiến độ Cắt UI Trang Chủ (Homepage - 100% Complete):Section 1 (Hero Section): Header cố định, slogan chính, nút CTA song song và 3 thẻ thông số uy tín.   Section 2 (Our Services): Bố cục 3 cột thẻ dịch vụ tỉ lệ vuông 1:1 (Care, Repair, Restore).   Section 3 (Our Process): Thiết kế xanh đen Midnight Navy, ảnh dọc 3:4 ở trung tâm, 4 bước quy trình xếp đối xứng 2 bên.   Section 4 (Results & Transformations): Trình bày 4 case study Before / After so le chuẩn tỷ lệ.   Section 5 (About T'S LAB): Bố cục 2 cột (50% Ảnh vuông xỏ chỉ thủ công - 50% Đoạn văn triết lý thương hiệu).   Section 6 (Let's Connect / CTA): Banner kêu gọi hành động màu xanh đen với cụm nút bấm chuyển đổi cao.   Section 7 (The Journal): Lưới 3 bài viết tin tức/kinh nghiệm chăm sóc giày tỉ lệ khung 16:10.   Section 8 (Main Footer): Chân trang 5 cột thông tin cửa hàng, dịch vụ, mạng xã hội, form đăng ký newsletter và bản quyền 2026.   3. Kiến thức Kỹ thuật Cốt lõi & Tương tác JS:CSS Grid & Flexbox: Linh hoạt co giãn responsive mượt trên Desktop, Tablet và Mobile.   Aspect Ratio: Cố định tỷ lệ khung ảnh (1:1, 3:4, 16:10) ngăn vỡ phom giao diện.   Interactive JS (main.js): Sticky Navbar đổi màu khi scroll, chuyển tab ngôn ngữ EN/VI, smooth scroll, form newsletter submit.4. Kế hoạch Tiếp theo (Chờ Luca bật đèn xanh):Dựng tiếp 5 Trang Phụ (Side Pages) trong folder test hoặc tiến hành Execute (Porting) toàn bộ code HTML/CSS/JS này sang bộ khung WordPress Theme (front-page.php, header.php, footer.php, functions.php).

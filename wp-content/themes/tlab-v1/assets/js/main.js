@@ -3,7 +3,7 @@
 
     // Đợi tài liệu sẵn sàng
     $(document).ready(function() {
-        console.log("Miuw: jQuery đã sẵn sàng!");
+        console.log("jQuery đã sẵn sàng!");
 
         var $window = $(window),
             $body = $('body'),
