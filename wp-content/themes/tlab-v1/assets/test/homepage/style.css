@@ -1,0 +1,607 @@
+/* ==========================================
+   0. BIẾN HỆ THỐNG & CONTAINER CHUẨN HÓA
+   ========================================== */
+:root {
+    --container-max: 1440px;   /* Chiều rộng tối đa đồng bộ cả 2 trang */
+    --gutter: 5vw;             /* Khoảng thở 2 bên cân bằng trên mọi màn hình */
+    --navy-dark: #060e1a;      /* Xanh đen Midnight Navy */
+    --cream-bg: #f4f2ef;       /* Kem nhạt tinh tế */
+    --text-main: #16181d;      /* Đen than */
+    --text-muted: #5f6672;     /* Xám trung tính */
+    --border-light: rgba(22, 24, 29, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: #ffffff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Khung chứa chuẩn hóa: giữ nội dung ở giữa với khoảng trống 2 bên đều nhau */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+/* Eyebrow Tag */
+.eyebrow-tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.eyebrow-tag .line {
+    width: 24px;
+    height: 1px;
+    background-color: rgba(22, 24, 29, 0.35);
+}
+
+.eyebrow-tag.light {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.eyebrow-tag .line.light {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.section-heading {
+    font-size: clamp(36px, 3.4vw, 50px);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.9px;
+    color: var(--text-main);
+}
+
+/* Nút bấm */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 26px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: var(--navy-dark);
+    border: 1px solid #ffffff;
+}
+
+.btn-white:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   1. HEADER & HERO SECTION
+   ========================================== */
+.hero-wrapper {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #141210;
+    color: #ffffff;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 9, 8, 0.76) 0%,
+        rgba(10, 9, 8, 0.45) 55%,
+        rgba(10, 9, 8, 0.25) 100%
+    );
+}
+
+/* Navbar mặc định tĩnh (Static) */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 36px 0;
+    z-index: 100;
+    background: transparent;
+    transition: all 0.4s ease;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.65;
+}
+
+.brand-logo {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.lang-switch {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.lang-switch span.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Nội dung chính Hero */
+.hero-body {
+    position: relative;
+    z-index: 10;
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-title {
+    font-size: clamp(44px, 4.6vw, 68px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -1.4px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.hero-desc {
+    font-size: clamp(15px, 1.15vw, 17px);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 34px;
+    max-width: 540px;
+}
+
+/* 3 Cột Highlights đáy Hero */
+.hero-highlights {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 24px 0 32px 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 4vw, 64px);
+}
+
+.highlight-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 6px;
+}
+
+.highlight-sub {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* ==========================================
+   2. THE VALUE OF PARTNERSHIP (01 / 02 / 03)
+   ========================================== */
+.values-section {
+    background-color: var(--cream-bg);
+    padding: 115px 0;
+}
+
+.values-header {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: end;
+    margin-bottom: 68px;
+}
+
+.values-header-right p {
+    font-size: clamp(15px, 1.1vw, 16.5px);
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 440px;
+}
+
+.values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+}
+
+.value-item {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+}
+
+.value-img {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background-color: #e5e7eb;
+}
+
+.value-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.value-item:hover .value-img img {
+    transform: scale(1.03);
+}
+
+.value-info {
+    max-width: 520px;
+}
+
+.value-heading {
+    font-size: clamp(17px, 1.25vw, 19px);
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.value-text {
+    font-size: clamp(14.5px, 1.05vw, 16px);
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.text-link {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s;
+}
+
+.text-link:hover {
+    color: var(--text-main);
+}
+
+
+/* ==========================================
+   3. THE PROCESS (4 BƯỚC CỘT PHẢI)
+   ========================================== */
+.process-section {
+    background-color: #ffffff;
+    padding: 115px 0;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: clamp(36px, 5vw, 84px);
+    align-items: start;
+}
+
+.process-left {
+    max-width: 480px;
+}
+
+.process-lead {
+    margin-top: 20px;
+    font-size: clamp(14.5px, 1.05vw, 16px);
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 420px;
+}
+
+.process-divider {
+    width: 1px;
+    height: 100%;
+    min-height: 280px;
+    background-color: var(--border-light);
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 480px;
+}
+
+.step-item p {
+    font-size: clamp(15px, 1.1vw, 16.5px);
+    line-height: 1.65;
+    color: var(--text-muted);
+}
+
+.step-item strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   4. CTA BANNER (MIDNIGHT NAVY)
+   ========================================== */
+.cta-banner {
+    background-color: var(--navy-dark);
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+.cta-heading {
+    font-size: clamp(36px, 3.4vw, 50px);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.8px;
+    margin-bottom: 18px;
+}
+
+.cta-subtext {
+    font-size: clamp(15px, 1.1vw, 16.5px);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 34px;
+    max-width: 680px;
+}
+
+
+/* ==========================================
+   5. FOOTER (NỀN KEM ĐỒNG BỘ)
+   ========================================== */
+.site-footer {
+    background-color: var(--cream-bg);
+    padding: 75px 0 55px 0;
+    color: var(--text-main);
+}
+
+.footer-top-line {
+    border: none;
+    border-top: 1px solid var(--border-light);
+    margin-bottom: 60px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 70px;
+}
+
+.f-col h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.f-col ul {
+    list-style: none;
+}
+
+.f-col li {
+    margin-bottom: 10px;
+}
+
+.f-col a,
+.f-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.f-col a:hover {
+    color: var(--text-main);
+}
+
+.f-col p {
+    margin-bottom: 8px;
+}
+
+.f-col strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid rgba(22, 24, 29, 0.35);
+    background: transparent;
+    padding: 8px 0;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-form input:focus {
+    border-bottom-color: var(--text-main);
+}
+
+.newsletter-form button {
+    padding: 7px 16px;
+    font-size: 13px;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 24, 29, 0.35);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--navy-dark);
+    color: #ffffff;
+    border-color: var(--navy-dark);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-brand {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+}
+
+.copyright {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+
+/* ==========================================
+   6. CHẾ ĐỘ BẬT HIỆU ỨNG: STICKY / FADE HEADER
+   (Xóa dấu mở comment ở dòng dưới và dấu đóng ở cuối khối để kích hoạt)
+   ========================================== */
+
+/*
+.navbar {
+    position: fixed;
+}
+
+.navbar.scrolled {
+    background-color: rgba(6, 14, 26, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+*/
+
+
+/* ==========================================
+   7. RESPONSIVE CHO TABLET & MOBILE
+   ========================================== */
+@media (max-width: 992px) {
+    :root {
+        --gutter: 32px;
+    }
+
+    .highlights-grid,
+    .values-header,
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .process-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 1px;
+    }
+
+    .value-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .value-img {
+        height: 240px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --gutter: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-title,
+    .section-heading,
+    .cta-heading {
+        font-size: 32px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+}
